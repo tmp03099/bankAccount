@@ -31,7 +31,7 @@ class CheckingAccount extends BankAccount{
            console.log(`The transaction is cancelled due to don't have enough money in your checking account`)
         }
         else{
-            //overriding withdraw method so use super keyword
+        //overriding withdraw method so use super keyword
           super.withdraw(num);
         } 
 
@@ -43,16 +43,7 @@ class SavingAccount extends BankAccount{
 
     //overriding withdraw method
     withdraw(num){
-        
-        // ? used this 
-        if ((this.balance - num) < 1000 ){
-            console.log(`The transaction is cancelled due to don't have enough money in your checking account`)
-        }else{
-
-            //overriding withdraw method so use super keyword
-            super.withdraw(num);
-        }
-
+        console.log(`Withdraw in saving account is disallow`);
     }
 
 }
